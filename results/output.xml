@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.0 on win32)" generated="20201104 19:59:29.441" rpa="false">
+<suite id="s1" name="Tests" source="C:\Users\berto\PycharmProjects\Automation\tests">
+<suite id="s1-s1" name="Test" source="C:\Users\berto\PycharmProjects\Automation\tests\test.robot">
+<kw name="Navegar para página Inicial" library="steps" type="setup">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201104 19:59:29.770" level="INFO">Opening browser 'chrome' to base url 'https://developer.clashroyale.com/'.</msg>
+<status status="PASS" starttime="20201104 19:59:29.770" endtime="20201104 19:59:36.020"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201104 19:59:36.020" endtime="20201104 19:59:38.193"></status>
+</kw>
+<status status="PASS" starttime="20201104 19:59:29.770" endtime="20201104 19:59:38.194"></status>
+</kw>
+<test id="s1-s1-t1" name="Login">
+<kw name="Navegar para página de Login" library="steps">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>xpath=//*[@id="content"]/div/div[2]/div/header/div/div/div[3]/div/a[2]</arg>
+</arguments>
+<status status="PASS" starttime="20201104 19:59:38.195" endtime="20201104 19:59:38.213"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="content"]/div/div[2]/div/header/div/div/div[3]/div/a[2]</arg>
+</arguments>
+<msg timestamp="20201104 19:59:38.213" level="INFO">Clicking link 'xpath=//*[@id="content"]/div/div[2]/div/header/div/div/div[3]/div/a[2]'.</msg>
+<status status="PASS" starttime="20201104 19:59:38.213" endtime="20201104 19:59:38.279"></status>
+</kw>
+<status status="PASS" starttime="20201104 19:59:38.195" endtime="20201104 19:59:38.280"></status>
+</kw>
+<kw name="Realizar login com usuário e senha valido" library="steps">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=email</arg>
+<arg>${USERNAME_LOGIN}</arg>
+</arguments>
+<msg timestamp="20201104 19:59:38.281" level="INFO">Typing text 'christophermoretobertonzin@gmail.com' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20201104 19:59:38.281" endtime="20201104 19:59:38.438"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=password</arg>
+<arg>${PASSWORD_LOGIN}</arg>
+</arguments>
+<msg timestamp="20201104 19:59:38.439" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20201104 19:59:38.483" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20201104 19:59:38.541" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20201104 19:59:38.438" endtime="20201104 19:59:38.541"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="content"]/div/div[2]/div/div/div/div/div/div/form/div[4]/button</arg>
+</arguments>
+<msg timestamp="20201104 19:59:38.541" level="INFO">Clicking button 'xpath=//*[@id="content"]/div/div[2]/div/div/div/div/div/div/form/div[4]/button'.</msg>
+<status status="PASS" starttime="20201104 19:59:38.541" endtime="20201104 19:59:38.607"></status>
+</kw>
+<status status="PASS" starttime="20201104 19:59:38.280" endtime="20201104 19:59:38.608"></status>
+</kw>
+<kw name="Test Generico Teardown" library="steps" type="teardown">
+<kw name="Run Keyword If Test Failed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<arguments>
+<arg>Teste falhou</arg>
+</arguments>
+<status status="PASS" starttime="20201104 19:59:38.608" endtime="20201104 19:59:38.608"></status>
+</kw>
+<kw name="Run Keyword If Test Passed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test passed.</doc>
+<arguments>
+<arg>Teste passou</arg>
+</arguments>
+<kw name="Teste passou" library="steps">
+<kw name="Logging Information" library="Log">
+<arguments>
+<arg>${TEST MESSAGE}</arg>
+<arg>${INFO}</arg>
+</arguments>
+<assign>
+<var>${RESULT}</var>
+</assign>
+<msg timestamp="20201104 19:59:38.610" level="INFO"></msg>
+<msg timestamp="20201104 19:59:38.610" level="INFO">${RESULT} = None</msg>
+<status status="PASS" starttime="20201104 19:59:38.609" endtime="20201104 19:59:38.610"></status>
+</kw>
+<status status="PASS" starttime="20201104 19:59:38.609" endtime="20201104 19:59:38.610"></status>
+</kw>
+<status status="PASS" starttime="20201104 19:59:38.609" endtime="20201104 19:59:38.610"></status>
+</kw>
+<status status="PASS" starttime="20201104 19:59:38.608" endtime="20201104 19:59:38.610"></status>
+</kw>
+<status status="PASS" starttime="20201104 19:59:38.194" endtime="20201104 19:59:38.610" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="Criar chave e pegar token">
+<kw name="Navegar até &quot;My Account&quot; e criar chave" library="steps">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>xpath=//*[@id="content"]/div/div[2]/div/header/div/div/div[3]/div/div/button/span[2]</arg>
+<arg>3m</arg>
+</arguments>
+<status status="PASS" starttime="20201104 19:59:38.612" endtime="20201104 19:59:39.741"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="content"]/div/div[2]/div/header/div/div/div[3]/div/div/button/span[2]</arg>
+</arguments>
+<msg timestamp="20201104 19:59:39.741" level="INFO">Clicking element 'xpath=//*[@id="content"]/div/div[2]/div/header/div/div/div[3]/div/div/button/span[2]'.</msg>
+<status status="PASS" starttime="20201104 19:59:39.741" endtime="20201104 19:59:39.801"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201104 19:59:40.811" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201104 19:59:39.802" endtime="20201104 19:59:40.811"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="content"]/div/div[2]/div/header/div/div/div[3]/div/div/ul/li[1]/a</arg>
+</arguments>
+<msg timestamp="20201104 19:59:40.812" level="INFO">Clicking link 'xpath=//*[@id="content"]/div/div[2]/div/header/div/div/div[3]/div/div/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20201104 19:59:40.811" endtime="20201104 19:59:40.901"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201104 19:59:41.916" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201104 19:59:40.901" endtime="20201104 19:59:41.917"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="content"]/div/div[2]/div/div/section[2]/div/div/div[2]/p/a</arg>
+</arguments>
+<msg timestamp="20201104 19:59:41.918" level="INFO">Clicking element 'xpath=//*[@id="content"]/div/div[2]/div/div/section[2]/div/div/div[2]/p/a'.</msg>
+<status status="PASS" starttime="20201104 19:59:41.917" endtime="20201104 19:59:42.023"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201104 19:59:43.027" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201104 19:59:42.024" endtime="20201104 19:59:43.027"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=name</arg>
+<arg>${KEY_NAME}</arg>
+</arguments>
+<msg timestamp="20201104 19:59:43.027" level="INFO">Typing text 'Create Key test' into text field 'id=name'.</msg>
+<status status="PASS" starttime="20201104 19:59:43.027" endtime="20201104 19:59:43.139"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=description</arg>
+<arg>${KEY_DESCRIPTION}</arg>
+</arguments>
+<msg timestamp="20201104 19:59:43.140" level="INFO">Typing text 'Test' into text field 'id=description'.</msg>
+<status status="PASS" starttime="20201104 19:59:43.140" endtime="20201104 19:59:43.219"></status>
+</kw>
+<kw name="Get My Ip" library="MyIp">
+<assign>
+<var>${IP_ADDRESS}</var>
+</assign>
+<msg timestamp="20201104 19:59:43.593" level="INFO">201.46.18.227</msg>
+<msg timestamp="20201104 19:59:43.593" level="INFO">${IP_ADDRESS} = 201.46.18.227</msg>
+<status status="PASS" starttime="20201104 19:59:43.219" endtime="20201104 19:59:43.593"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=range-0</arg>
+<arg>${IP_ADDRESS}</arg>
+</arguments>
+<msg timestamp="20201104 19:59:43.594" level="INFO">Typing text '201.46.18.227' into text field 'id=range-0'.</msg>
+<status status="PASS" starttime="20201104 19:59:43.594" endtime="20201104 19:59:43.703"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="content"]/div/div[2]/div/div/section/div/div/div[2]/form/div[5]/button</arg>
+</arguments>
+<msg timestamp="20201104 19:59:43.704" level="INFO">Clicking element 'xpath=//*[@id="content"]/div/div[2]/div/div/section/div/div/div[2]/form/div[5]/button'.</msg>
+<status status="PASS" starttime="20201104 19:59:43.704" endtime="20201104 19:59:43.756"></status>
+</kw>
+<status status="PASS" starttime="20201104 19:59:38.612" endtime="20201104 19:59:43.756"></status>
+</kw>
+<kw name="Capturar token gerado" library="steps">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>xpath=//*[@id="content"]/div/div[2]/div/div/section[2]/div/div/div[2]/ul/li/a</arg>
+</arguments>
+<status status="PASS" starttime="20201104 19:59:43.757" endtime="20201104 19:59:44.635"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="content"]/div/div[2]/div/div/section[2]/div/div/div[2]/ul/li/a</arg>
+</arguments>
+<msg timestamp="20201104 19:59:44.636" level="INFO">Clicking element 'xpath=//*[@id="content"]/div/div[2]/div/div/section[2]/div/div/div[2]/ul/li/a'.</msg>
+<status status="PASS" starttime="20201104 19:59:44.635" endtime="20201104 19:59:44.716"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="content"]/div/div[2]/div/div/section/div/div/div[2]/form/div[1]/div/samp</arg>
+</arguments>
+<assign>
+<var>${TOKEN}</var>
+</assign>
+<msg timestamp="20201104 19:59:44.741" level="INFO">${TOKEN} = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjRjMzhhOGU1LWU0NmQtNDg2NS05ZGJmLWE...</msg>
+<status status="PASS" starttime="20201104 19:59:44.716" endtime="20201104 19:59:44.741"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${TOKEN}</arg>
+<arg>${TOKEN}</arg>
+</arguments>
+<msg timestamp="20201104 19:59:44.742" level="INFO">${TOKEN} = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjRjMzhhOGU1LWU0NmQtNDg2NS05ZGJmLWE...</msg>
+<status status="PASS" starttime="20201104 19:59:44.741" endtime="20201104 19:59:44.742"></status>
+</kw>
+<status status="PASS" starttime="20201104 19:59:43.757" endtime="20201104 19:59:44.742"></status>
+</kw>
+<kw name="Test Generico Teardown" library="steps" type="teardown">
+<kw name="Run Keyword If Test Failed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<arguments>
+<arg>Teste falhou</arg>
+</arguments>
+<status status="PASS" starttime="20201104 19:59:44.743" endtime="20201104 19:59:44.743"></status>
+</kw>
+<kw name="Run Keyword If Test Passed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test passed.</doc>
+<arguments>
+<arg>Teste passou</arg>
+</arguments>
+<kw name="Teste passou" library="steps">
+<kw name="Logging Information" library="Log">
+<arguments>
+<arg>${TEST MESSAGE}</arg>
+<arg>${INFO}</arg>
+</arguments>
+<assign>
+<var>${RESULT}</var>
+</assign>
+<msg timestamp="20201104 19:59:44.744" level="INFO"></msg>
+<msg timestamp="20201104 19:59:44.744" level="INFO">${RESULT} = None</msg>
+<status status="PASS" starttime="20201104 19:59:44.743" endtime="20201104 19:59:44.744"></status>
+</kw>
+<status status="PASS" starttime="20201104 19:59:44.743" endtime="20201104 19:59:44.744"></status>
+</kw>
+<status status="PASS" starttime="20201104 19:59:44.743" endtime="20201104 19:59:44.744"></status>
+</kw>
+<status status="PASS" starttime="20201104 19:59:44.742" endtime="20201104 19:59:44.744"></status>
+</kw>
+<status status="PASS" starttime="20201104 19:59:38.612" endtime="20201104 19:59:44.744" critical="yes"></status>
+</test>
+<test id="s1-s1-t3" name="API Clash Royale">
+<kw name="Buscar clan por nome &quot;The resistance&quot; com Tag que inicia com &quot;##9V2Y&quot;" library="steps">
+<kw name="Search Clan" library="CustomLib">
+<arguments>
+<arg>${TOKEN}</arg>
+<arg>${NAME_OF_CLAN}</arg>
+<arg>${LOCATION_ID}</arg>
+<arg>${TAG}</arg>
+</arguments>
+<assign>
+<var>${TAG}</var>
+</assign>
+<msg timestamp="20201104 19:59:45.738" level="INFO">{"items":[{"tag":"#9V2YV8YJ","name":"The resistance","type":"open","badgeId":16000012,"clanScore":49169,"clanWarTrophies":3290,"location":{"id":57000038,"name":"Brazil","isCountry":true,"countryCode":"BR"},"requiredTrophies":5000,"donationsPerWeek":9354,"clanChestLevel":1,"clanChestMaxLevel":0,"members":49},{"tag":"#Y8Q89VVG","name":"The Resistance2","type":"inviteOnly","badgeId":16000136,"clanScore":50031,"clanWarTrophies":3305,"location":{"id":57000038,"name":"Brazil","isCountry":true,"countryCode":"BR"},"requiredTrophies":5300,"donationsPerWeek":11196,"clanChestLevel":1,"clanChestMaxLevel":0,"members":50}],"paging":{"cursors":{}}}
+{'items': [{'tag': '#9V2YV8YJ', 'name': 'The resistance', 'type': 'open', 'badgeId': 16000012, 'clanScore': 49169, 'clanWarTrophies': 3290, 'location': {'id': 57000038, 'name': 'Brazil', 'isCountry': True, 'countryCode': 'BR'}, 'requiredTrophies': 5000, 'donationsPerWeek': 9354, 'clanChestLevel': 1, 'clanChestMaxLevel': 0, 'members': 49}, {'tag': '#Y8Q89VVG', 'name': 'The Resistance2', 'type': 'inviteOnly', 'badgeId': 16000136, 'clanScore': 50031, 'clanWarTrophies': 3305, 'location': {'id': 57000038, 'name': 'Brazil', 'isCountry': True, 'countryCode': 'BR'}, 'requiredTrophies': 5300, 'donationsPerWeek': 11196, 'clanChestLevel': 1, 'clanChestMaxLevel': 0, 'members': 50}], 'paging': {'cursors': {}}}</msg>
+<msg timestamp="20201104 19:59:45.738" level="INFO">${TAG} = #9V2YV8YJ</msg>
+<status status="PASS" starttime="20201104 19:59:44.746" endtime="20201104 19:59:45.738"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${TAG}</arg>
+<arg>${TAG}</arg>
+</arguments>
+<msg timestamp="20201104 19:59:45.739" level="INFO">${TAG} = #9V2YV8YJ</msg>
+<status status="PASS" starttime="20201104 19:59:45.738" endtime="20201104 19:59:45.739"></status>
+</kw>
+<status status="PASS" starttime="20201104 19:59:44.746" endtime="20201104 19:59:45.739"></status>
+</kw>
+<kw name="Buscar por membros do clan" library="steps">
+<kw name="Search Members" library="CustomLib">
+<arguments>
+<arg>${TOKEN}</arg>
+<arg>${TAG}</arg>
+</arguments>
+<assign>
+<var>${MEMBERS}</var>
+</assign>
+<msg timestamp="20201104 19:59:46.599" level="INFO">${MEMBERS} = {'items': [{'tag': '#P209R8P', 'name': 'Vortic', 'role': 'member', 'lastSeen': '20201104T223124.000Z', 'expLevel': 13, 'trophies': 5450, 'arena': {'id': 54000016, 'name': 'Master II'}, 'clanRank': 1, ...</msg>
+<status status="PASS" starttime="20201104 19:59:45.740" endtime="20201104 19:59:46.599"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${MEMBERS}</arg>
+<arg>${MEMBERS}</arg>
+</arguments>
+<msg timestamp="20201104 19:59:46.602" level="INFO">${MEMBERS} = {'items': [{'tag': '#P209R8P', 'name': 'Vortic', 'role': 'member', 'lastSeen': '20201104T223124.000Z', 'expLevel': 13, 'trophies': 5450, 'arena': {'id': 54000016, 'name': 'Master II'}, 'clanRank': 1, ...</msg>
+<status status="PASS" starttime="20201104 19:59:46.599" endtime="20201104 19:59:46.603"></status>
+</kw>
+<status status="PASS" starttime="20201104 19:59:45.740" endtime="20201104 19:59:46.603"></status>
+</kw>
+<kw name="Test Generico Teardown" library="steps" type="teardown">
+<kw name="Run Keyword If Test Failed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<arguments>
+<arg>Teste falhou</arg>
+</arguments>
+<status status="PASS" starttime="20201104 19:59:46.606" endtime="20201104 19:59:46.607"></status>
+</kw>
+<kw name="Run Keyword If Test Passed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test passed.</doc>
+<arguments>
+<arg>Teste passou</arg>
+</arguments>
+<kw name="Teste passou" library="steps">
+<kw name="Logging Information" library="Log">
+<arguments>
+<arg>${TEST MESSAGE}</arg>
+<arg>${INFO}</arg>
+</arguments>
+<assign>
+<var>${RESULT}</var>
+</assign>
+<msg timestamp="20201104 19:59:46.610" level="INFO"></msg>
+<msg timestamp="20201104 19:59:46.610" level="INFO">${RESULT} = None</msg>
+<status status="PASS" starttime="20201104 19:59:46.609" endtime="20201104 19:59:46.610"></status>
+</kw>
+<status status="PASS" starttime="20201104 19:59:46.608" endtime="20201104 19:59:46.611"></status>
+</kw>
+<status status="PASS" starttime="20201104 19:59:46.607" endtime="20201104 19:59:46.611"></status>
+</kw>
+<status status="PASS" starttime="20201104 19:59:46.605" endtime="20201104 19:59:46.611"></status>
+</kw>
+<status status="PASS" starttime="20201104 19:59:44.745" endtime="20201104 19:59:46.612" critical="yes"></status>
+</test>
+<test id="s1-s1-t4" name="Arquivo CSV">
+<kw name="Gerar arquivo com csv" library="steps">
+<kw name="Write Csv" library="CustomLib">
+<arguments>
+<arg>${FILENAME}</arg>
+<arg>${MEMBERS}</arg>
+</arguments>
+<assign>
+<var>${RESULT}</var>
+</assign>
+<msg timestamp="20201104 19:59:46.623" level="INFO">${RESULT} = members.csv</msg>
+<status status="PASS" starttime="20201104 19:59:46.619" endtime="20201104 19:59:46.623"></status>
+</kw>
+<status status="PASS" starttime="20201104 19:59:46.618" endtime="20201104 19:59:46.623"></status>
+</kw>
+<kw name="Test Generico Teardown" library="steps" type="teardown">
+<kw name="Run Keyword If Test Failed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<arguments>
+<arg>Teste falhou</arg>
+</arguments>
+<status status="PASS" starttime="20201104 19:59:46.627" endtime="20201104 19:59:46.627"></status>
+</kw>
+<kw name="Run Keyword If Test Passed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test passed.</doc>
+<arguments>
+<arg>Teste passou</arg>
+</arguments>
+<kw name="Teste passou" library="steps">
+<kw name="Logging Information" library="Log">
+<arguments>
+<arg>${TEST MESSAGE}</arg>
+<arg>${INFO}</arg>
+</arguments>
+<assign>
+<var>${RESULT}</var>
+</assign>
+<msg timestamp="20201104 19:59:46.630" level="INFO"></msg>
+<msg timestamp="20201104 19:59:46.630" level="INFO">${RESULT} = None</msg>
+<status status="PASS" starttime="20201104 19:59:46.629" endtime="20201104 19:59:46.630"></status>
+</kw>
+<status status="PASS" starttime="20201104 19:59:46.628" endtime="20201104 19:59:46.631"></status>
+</kw>
+<status status="PASS" starttime="20201104 19:59:46.627" endtime="20201104 19:59:46.631"></status>
+</kw>
+<status status="PASS" starttime="20201104 19:59:46.625" endtime="20201104 19:59:46.631"></status>
+</kw>
+<status status="PASS" starttime="20201104 19:59:46.617" endtime="20201104 19:59:46.633" critical="yes"></status>
+</test>
+<kw name="Close All Browsers" library="Selenium2Library" type="teardown">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20201104 19:59:46.637" endtime="20201104 19:59:48.758"></status>
+</kw>
+<doc>Teste</doc>
+<status status="PASS" starttime="20201104 19:59:29.464" endtime="20201104 19:59:48.758"></status>
+</suite>
+<status status="PASS" starttime="20201104 19:59:29.442" endtime="20201104 19:59:48.765"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0">Critical Tests</stat>
+<stat pass="4" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" id="s1" name="Tests">Tests</stat>
+<stat pass="4" fail="0" id="s1-s1" name="Test">Tests.Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
